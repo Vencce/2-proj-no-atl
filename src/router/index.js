@@ -1,0 +1,20 @@
+import { createRouter, createWebHistory } from 'vue-router';
+import LivrosView from '@/views/LivrosView.vue';
+import EditoraView from '@/views/EditoraView.vue';
+import AutoresView from '@/views/AutoresView.vue';
+import ProdutosView from '@/views/ProdutosView.vue';
+import LoginView from '@/views/LoginView.vue';
+
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    { path: '/Livros', name: 'livros', component: LivrosView },
+    { path: '/Editora', name: 'editora', component: EditoraView },
+    { path: '/Autores', name: 'autores', component: AutoresView },
+    { path: '/Produtos', name: 'produtos', component: ProdutosView },
+    { path: '/Login', name: 'Login', component: LoginView },
+  ],
+});
+
+export default router
